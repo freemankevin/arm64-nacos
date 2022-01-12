@@ -1,0 +1,15 @@
+---
+version: '3'
+services:
+  nacos:
+    image: nacos:v1.2.1 
+    container_name: nacos
+    restart: on-failure
+    environment:
+      MODE: standalone
+    #volumes:
+    #  - ./application.properties:/home/nacos/conf/application.properties
+    #depends_on:
+    #  - mysql
+    ports:
+      - '8848:8848'
